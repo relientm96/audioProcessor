@@ -1,7 +1,7 @@
 {
-    "name": "graphvisualizer",
+    "name": "audioeffect",
     "version": "1.0.0",
-    "description": "Graphical Animations of infamous shortest path algorithms.",
+    "description": "Online Audio Processor",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,5 +19,10 @@
     "homepage": "https://github.com/relientm96/graphVisualizer#readme",
     "devDependencies": {
         "nodemon": "^2.0.1"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-fileupload": "^1.1.6",
+        "formidable": "^1.2.1"
     }
 }
