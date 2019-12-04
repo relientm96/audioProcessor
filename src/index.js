@@ -2,6 +2,7 @@
 
 const express = require('express');
 const upload = require('express-fileupload');
+const formidable = require('formidable');
 const app = express();
 
 /* Port Variables*/
@@ -19,7 +20,6 @@ app.get('/', function(req, res) {
 
 app.post('/youtube', function(req, res) {
     if (req.files) {
-        console.log(req.files);
         res.send("Uploaded File!");
     }
     console.log(req.files);
