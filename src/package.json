@@ -1,7 +1,7 @@
 {
-    "name": "graphvisualizer",
+    "name": "audioeffect",
     "version": "1.0.0",
-    "description": "Graphical Animations of infamous shortest path algorithms.",
+    "description": "Online Audio Processor",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
