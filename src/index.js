@@ -20,8 +20,10 @@ app.get('/', function(req, res) {
 app.post('/youtube', function(req, res) {
     if (req.files) {
         console.log(req.files);
+        res.send("Uploaded File!");
     }
-    res.send("Youtube Request Done!");
+    console.log(req.files);
+    res.send("Able to make a post request...");
 })
 
 app.listen(PORT, function() {
