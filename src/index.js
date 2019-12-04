@@ -3,10 +3,15 @@
 const express = require('express');
 const upload = require('express-fileupload');
 const formidable = require('formidable');
+const file = require('fs');
 const app = express();
 
 /* Port Variables*/
 const PORT = process.env.PORT || 20213;
+
+// Variable to store the current path of the uploaded file
+var filePath = "";
+var fileName = "";
 
 //Middleware for static files
 app.use('/css', express.static(__dirname + '/css'));
@@ -19,12 +24,18 @@ app.get('/', function(req, res) {
 });
 
 app.post('/youtube', function(req, res) {
-    if (req.files) {
-        res.send("Uploaded File!");
-    }
-    console.log(req.files);
-    res.send("Able to make a post request...");
-})
+    var form = new formidable.IncomingForm();
+    form.parse(req);
+    form.on('fileBegin', function(name, file) {
+        file.path = __dirname + '/uploads/' + file.name;
+        filePath = file.path;
+        fileName = file.name;
+    });
+    form.on('file', function(name, file) {
+        console.log("Uploaded " + file.name);
+        res.send("Succesfully Uploaded File " + fileName + " at: " + filePath + " unto server");
+    })
+});
 
 app.listen(PORT, function() {
     console.log(`Listening on : ${PORT}`);
