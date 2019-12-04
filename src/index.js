@@ -1,6 +1,7 @@
 /* Main Node.js server file*/
 
 const express = require('express');
+const upload = require('express-fileupload');
 const app = express();
 
 /* Port Variables*/
@@ -16,6 +17,13 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 
+app.post('/youtube', function(req, res) {
+    if (req.files) {
+        console.log(req.files);
+    }
+    res.send("Youtube Request Done!");
+})
+
 app.listen(PORT, function() {
-    console.log(`Listening :${PORT}`);
+    console.log(`Listening on : ${PORT}`);
 });

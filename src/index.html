@@ -15,12 +15,14 @@
 <body>
 
     <!-- Title Jumbo -->
-    <div id="titlePage">
-        <div class="container">
-            <div>
-                <h1>Audio Processor</h1>
-                <p> Testing this audio processor with this thing</p>
-            </div>
+    <div class="container">
+        <div id="titlePage">
+            <h1>Audio Processor</h1>
+            <p> Testing this audio processor with this thing</p>
+            <form method="post" enctype="multipart/form-data" action="/youtube">
+                <input type="file" name="filename">
+                <input type="submit" value="Upload">
+            </form>
         </div>
     </div>
 
