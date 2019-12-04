@@ -1,0 +1,23 @@
+{
+    "name": "graphvisualizer",
+    "version": "1.0.0",
+    "description": "Graphical Animations of infamous shortest path algorithms.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/relientm96/graphVisualizer.git"
+    },
+    "author": "Matthew Yong",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/relientm96/graphVisualizer/issues"
+    },
+    "homepage": "https://github.com/relientm96/graphVisualizer#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.1"
+    }
+}
